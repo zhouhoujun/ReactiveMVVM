@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReactiveMVVM.Commands.RxCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQQACACAAQAAEAAEAQAAAQCgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RxCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Commands.RxCommand&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQQACACAAQAAEAAEAQAAAQCgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RxCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tuple&lt;T1, T2&gt;" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAIAAAAACgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnvironmentSpecials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Diagnostics.Contracts.ContractInvariantMethodAttribute" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnvironmentSpecials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Diagnostics.Contracts.Contract" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAgAACAAA=</HashCode>
+      <FileName>EnvironmentSpecials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Concurrency.Lazy&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>EnvironmentSpecials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.ModelExtensions" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extenstions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.ObservableExtenstions" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAIAAAACAAAAAAAAAAAAAAAAABQABA=</HashCode>
+      <FileName>Extenstions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.ModelBase" Collapsed="true">
+    <Position X="0.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.MvvmManager" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MvvmManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.ObservableObject" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgASACAAAIAAAEAAAAAAAAQKAIAAAAACAAAAAAA=</HashCode>
+      <FileName>ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.ViewModelBase" Collapsed="true">
+    <Position X="0.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAABAgAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Ioc.InjectAttribute">
+    <Position X="16.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ioc\InjectAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.Ioc.IocContainer" BaseTypeListCollapsed="true">
+    <Position X="14" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAIAAAAQAAgAAAAAAQABAABAAAAAAEAACAAEAA=</HashCode>
+      <FileName>Ioc\IocContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Ioc.ResolveException">
+    <Position X="17" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ioc\ResolveException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.LoggerForObservable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging\EnableLoggerExtensions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.EnableLoggerExtensions" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging\EnableLoggerExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.NullLogger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYCAAAAAAAAAAAAgAAcAAAAACEAEAQA=</HashCode>
+      <FileName>Logging\Loggers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.LoggerBase" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYCCEAAAAAAAKBCpAAcAQIAECEAEAQA=</HashCode>
+      <FileName>Logging\Loggers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.DefaultLogger" Collapsed="true">
+    <Position X="8.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAIAAJAAAIAIAAAAAAAAA=</HashCode>
+      <FileName>Logging\Loggers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.LogManger" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAQAAAAAAAA=</HashCode>
+      <FileName>Logging\LogManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReactiveMVVM.Logging.TypeCache&lt;TParam, TVal&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABgAUAAAAAABACAAQAAIAAAAAQAAAACABAAAAAAA=</HashCode>
+      <FileName>Logging\TypeCache.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.SigneMessage" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Messaging\Messages.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.CallbackMessage&lt;T&gt;" Collapsed="true">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Messaging\Messages.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.Messenger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQACAAAAAAAEAAIQAAACQDAAAAAAEAAAAAEAA=</HashCode>
+      <FileName>Messaging\Messenger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.PropertyMessage" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAABIAAA=</HashCode>
+      <FileName>Messaging\PropertyMessages.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.PropertyChangedMessage&lt;T&gt;" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messaging\PropertyMessages.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Messaging.PropertyChangedMessageWithCallback&lt;T&gt;" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Messaging\PropertyMessages.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReactiveMVVM.Subjects.LoggingSubject&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACCAAAIAAAAAAAAAAAACAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Subjects\LoggingSubject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReactiveMVVM.Subjects.ScheduledSubject&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACCAAAIAAAABAAAAACACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Subjects\ScheduledSubject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ReactiveMVVM.Commands.IRxCommand" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\IRxCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Commands.IRxCommand&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\IRxCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.IObservableObject" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IObservableObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Ioc.IContainer" Collapsed="true">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAABAAAAAAEAACAAEAA=</HashCode>
+      <FileName>Ioc\IContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Logging.IEnableLogger" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging\IEnableLogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Logging.ILogger" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYCAAAAAAAAAAAAgAAcAAAAACEAEAQA=</HashCode>
+      <FileName>Logging\ILoger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.IMessage" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messaging\IMessage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.IMessenger" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAEAAAAAEAA=</HashCode>
+      <FileName>Messaging\IMessenger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.IPropertyMessages" Collapsed="true">
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Messaging\IPropertyMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.IPropertyChangedMessage&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messaging\IPropertyMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.IPropertyChangedMessageWithCallback&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Messaging\IPropertyMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.ISenderMessage" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Messaging\ISenderMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.ISigneMessage" Collapsed="true">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messaging\ISenderMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReactiveMVVM.Messaging.ICallbackMessage&lt;T&gt;" Collapsed="true">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Messaging\ISenderMessages.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ReactiveMVVM.Logging.LogLevel" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAAAAAAAEAAAAAAEAEAAA=</HashCode>
+      <FileName>Logging\LogLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,1110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReactiveMVVM</name>
+    </assembly>
+    <members>
+        <member name="T:ReactiveMVVM.Commands.IRxCommand">
+            <summary>
+            the command with reactive.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.IEnableLogger">
+            <summary>
+            IEnableLogger enable to get a logger access to the extenstion method Logger().
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Commands.IRxCommand`1">
+            <summary>
+            the command with reactive.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ReactiveMVVM.Commands.RxCommand">
+            <summary>
+            The reactive command.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.#ctor(System.Predicate{System.Object},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            constructor. 
+            Create a new command, You can subscribe excute action by this instance.
+            </summary>
+            <param name="canExecute">Judage if can excute the command</param>
+            <param name="scheduer"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.#ctor(System.Action{System.Object},System.Predicate{System.Object},System.Action{System.Exception},System.Action,System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            constructor
+            </summary>
+            <param name="dowork">The action command to do</param>
+            <param name="canExecute">Judage if can excute this command</param>
+            <param name="onError">To deal with excute error</param>
+            <param name="afterCompleteWork">After command excute completed to do this action</param>
+            <param name="scheduer">Represents an object that schedules units of work</param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.CanExecute(System.Object)">
+            <summary>
+            To judge if the command can excute.
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.Execute(System.Object)">
+            <summary>
+            To be called when the command is invoked
+            </summary>
+            <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.Subscribe(System.IObserver{System.Object})">
+            <summary>
+            Subscribes an observer to the subject.
+            </summary>
+            <remarks>
+            IDisposable object that can be used to unsubscribe the observer from the subject.
+            </remarks>
+            <param name="observer">Observer to subscribe to the subject.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand.Dispose">
+            <summary>
+            Implement IDisposable, Can unsubscribe all observers and release resources. 
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Commands.RxCommand.CanExecuteObservable">
+            <summary>
+            Fires whenever the CanExecute of the ICommand changes. 
+            </summary>
+        </member>
+        <member name="E:ReactiveMVVM.Commands.RxCommand.CanExecuteChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Commands.RxCommand`1">
+            <summary>
+            The reactive command.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.#ctor(System.Predicate{`0},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            constructor
+            </summary>
+            <param name="canExecute"></param>
+            <param name="scheduer"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.#ctor(System.Action{`0},System.Predicate{`0},System.Action{System.Exception},System.Action,System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            constructor
+            </summary>
+            <param name="dowork">The action command to do</param>
+            <param name="canExecute">Judage if can excute</param>
+            <param name="onError">To deal with excute error</param>
+            <param name="afterCompleteWork">After command excute completed to do this action</param>
+            <param name="scheduer">Represents an object that schedules units of work</param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.CanExecute(System.Object)">
+            <summary>
+            To judge if the command can excute.
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.Execute(System.Object)">
+            <summary>
+            To be called when the command is invoked
+            </summary>
+            <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Subscribes an observer to the subject.
+            </summary>
+            <remarks>
+            IDisposable object that can be used to unsubscribe the observer from the subject.
+            </remarks>
+            <param name="observer">Observer to subscribe to the subject.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Commands.RxCommand`1.Dispose">
+            <summary>
+            Implement IDisposable, Can unsubscribe all observers and release resources. 
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Commands.RxCommand`1.CanExecuteObservable">
+            <summary>
+            Fires whenever the CanExecute of the ICommand changes. 
+            </summary>
+        </member>
+        <member name="E:ReactiveMVVM.Commands.RxCommand`1.CanExecuteChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.ModelExtensions.RaiseAndSetIfChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1@,``1)">
+            <summary>
+            set it new value, raise event PropertyChangedEventHandler and broadcast property changed message if changed.
+            </summary>
+            <typeparam name="Tobj"></typeparam>
+            <typeparam name="T"></typeparam>
+            <param name="obj">the object that owner of the changed property. </param>
+            <param name="propertyExpression">property expression</param>
+            <param name="oldvalue">old value of the property.</param>
+            <param name="newValue">new value of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.RaiseAndSetIfChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1@,``1,System.Boolean)">
+            <summary>
+            set it new value, raise event PropertyChangedEventHandler and broadcast property changed message if changed.
+            </summary>
+            <typeparam name="Tobj"></typeparam>
+            <typeparam name="T"></typeparam>
+            <param name="obj">the object that owner of the changed property. </param>
+            <param name="propertyExpression">property expression</param>
+            <param name="oldvalue">old value of the property.</param>
+            <param name="newValue">new value of the property.</param>
+            <param name="broadcast">if broadcast the property changed message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.ObservableProperty``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Observe property, Can subscribe action when it change.
+            </summary>
+            <typeparam name="Tobj"></typeparam>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="propertyExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.ObserveOnDefaultScheduler``1(System.IObservable{``0})">
+            <summary>
+            Set Observable observe on the MVVM default secheduler.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.OfType``2(System.IObservable{``0},System.Func{``0,``1})">
+            <summary>
+            convert as type.
+            </summary>
+            <typeparam name="Tobj"></typeparam>
+            <typeparam name="TRes"></typeparam>
+            <param name="source"></param>
+            <param name="converter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.SendChannel``1(ReactiveMVVM.IObservableObject,System.Reactive.Subjects.ISubject{System.Object},``0,System.Action{System.Exception},System.Action,System.Int32)">
+            <summary>
+            send the message.
+            </summary>
+            <typeparam name="T">The type of the message.</typeparam>
+            <param name="obj">the ObservableObject instance.</param>
+            <param name="subject">the subject to observe on this message.</param>
+            <param name="message">The message to send.</param>
+            <param name="onError">To do deal with errors when send message.</param>
+            <param name="onCompleted">When send message completed to do the onCompleted action.</param> 
+            <param name="wait">wait some milliseconds to send the message. </param>
+            <returns>return the disposable, if dispose it means to cancel the send.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableExtenstions.DebugObservable``1(System.IObservable{``0},System.String)">
+            <summary>
+            Use to log message. Help you debug programe.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="This"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.IObservableObject">
+            <summary>
+            The interface of IObservableObject, it can send message.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.IObservableObject.Send``1(``0,System.Int32)">
+            <summary>
+            send the message.
+            </summary>
+            <typeparam name="T">The type of the message.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="wait">wait some milliseconds to send the message. </param>
+            <returns>return the disposable, if dispose it means to cancel the send.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.IObservableObject.Send``1(``0,System.Action{System.Exception},System.Int32)">
+            <summary>
+            send the message.
+            </summary>
+            <typeparam name="T">The type of the message.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="onError">To do deal with errors when send message.</param>
+            <param name="wait">wait some milliseconds to send the message. </param>
+            <returns>return the disposable, if dispose it means to cancel the send.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.IObservableObject.Send``1(``0,System.Action,System.Int32)">
+            <summary>
+            send the message.
+            </summary>
+            <typeparam name="T">The type of the message.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="onCompleted">When send message completed to do the onCompleted action.</param> 
+            <param name="wait">wait some milliseconds to send the message. </param>
+            <returns>return the disposable, if dispose it means to cancel the send.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.IObservableObject.Send``1(``0,System.Action{System.Exception},System.Action,System.Int32)">
+            <summary>
+            send the message.
+            </summary>
+            <typeparam name="T">The type of the message.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="onError">To do deal with errors when send message.</param>
+            <param name="onCompleted">When send message completed to do the onCompleted action.</param> 
+            <param name="wait">wait some milliseconds to send the message. </param>
+            <returns>return the disposable, if dispose it means to cancel the send.</returns>
+        </member>
+        <member name="T:ReactiveMVVM.Ioc.IContainer">
+            <summary>
+            Ioc container.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.IsRegistered``1(System.String)">
+            <summary>
+            If this type or with special name is registed.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Register``1(``0,System.String)">
+            <summary>
+            Register one instance
+            </summary>
+            <typeparam name="T">They type of base type or interface of the instance.</typeparam>
+            <param name="instance">instance of the object</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Register``1(System.String)">
+            <summary>
+            Registe a type into container.
+            </summary>
+            <typeparam name="T">The type of class being registered</typeparam>
+            <param name="key">registe with a friendly name key to this type.</param>
+            <returns>return this container self.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Register``2(System.String)">
+            <summary>
+            Registe a implement type into container.
+            </summary>
+            <typeparam name="TBase">base type or interface</typeparam>
+            <typeparam name="TClass">Implement the base type or interface</typeparam>
+            <param name="key">registe with a friendly name key to <see cref="!:TClass"/>.</param>
+            <returns>Implement the base type or interface</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Register``1(System.Func{``0},System.String)">
+            <summary>
+            Registe a instance factory for T type.
+            </summary>
+            <typeparam name="T">The type of class being registered. </typeparam>
+            <param name="factory">The factory func to create instance of <see cref="!:T"/>.</param>
+            <param name="key">registe with a friendly name key to this factory.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetAllInstances``1">
+            <summary>
+            Get all instances of the given T currently registered in the container.
+            </summary>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            if there are errors resolving the service instance.
+            </exception>
+            <typeparam name="T">Type of object requested.</typeparam>
+            <returns>A sequence of instances of the requested T.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetAllInstances(System.Type)">
+            <summary>
+            Get all instances of the given serviceType currently registered in the container.
+            </summary>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            if there are errors resolving the service instance.
+            </exception>
+            <param name="serviceType">Type of object requested.</param>
+            <returns>A sequence of instances of the requested serviceType.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetInstance``1">
+            <summary>
+            Get an instance of the given T.
+            </summary>
+            <typeparam name="T">Type of object requested.</typeparam>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            if there are errors resolving the service instance.
+            </exception>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetInstance``1(System.String)">
+            <summary>
+            Get an instance of the given named T.
+            </summary>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            if there are errors resolving the service instance.
+            </exception>
+            <typeparam name="T">Type of object requested.</typeparam>
+            <param name="key"></param>
+            <returns>The requested instance.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetInstance(System.Type)">
+            <summary>
+            Get an instance of the given serviceType.
+            </summary>
+            <param name="serviceType">Type of object requested.</param>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            if there are errors resolving the service instance.
+            </exception>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.GetInstance(System.Type,System.String)">
+            <summary>
+            Get an instance of the given named serviceType.
+            </summary>
+            <exception cref="T:ReactiveMVVM.Ioc.ResolveException">
+            If there are errors resolving the service instance.
+            </exception>
+            <param name="serviceType">Type of object requested.</param>
+            <param name="key"></param>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Unregister``1(System.String)">
+            <summary>
+            unregiste this <see cref="!:T"/> type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Ioc.IContainer.Unregister``1(``0)">
+            <summary>
+            unregiste this <see cref="!:T"/> type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.Ioc.InjectAttribute">
+            <summary>
+            The attribute to define how to be injected.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Ioc.ResolveException">
+            <summary>
+            Resolve object instance error exception.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.LoggerForObservable">
+            <summary>
+            Get the logger for Observable object.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.EnableLoggerExtensions.Logger(ReactiveMVVM.Logging.IEnableLogger)">
+            <summary>
+            Returns the current logger object, which allows the object to
+            log messages with the type name attached.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.ILogger">
+            <summary>
+            The interface of logger. Allow you create youself logger.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.Debug(System.Object)">
+            <summary>
+            Log debug information. 
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.Debug(System.Object,System.Exception)">
+            <summary>
+            Log debug information. 
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.DebugFormat(System.String,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.DebugFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="provider"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.DebugFormat(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="arg0"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.DebugFormat(System.String,System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="arg0"></param>
+            <param name="arg1"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.ILogger.DebugFormat(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="arg0"></param>
+            <param name="arg1"></param>
+            <param name="arg2"></param>
+        </member>
+        <member name="P:ReactiveMVVM.Logging.ILogger.LogLevel">
+            <summary>
+            Get or set the from which level will log message. 
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.NullLogger">
+            <summary>
+            The null object of logger. It do nothing.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Logging.NullLogger.LogLevel">
+            <summary>
+            Get or set the from which level will log message. 
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.LoggerBase">
+            <summary>
+            The logger base class.
+            </summary>
+        </member>
+        <member name="F:ReactiveMVVM.Logging.LoggerBase._LogInterval">
+            <summary>
+            the tiny interval time to log message.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.#ctor(System.String)">
+            <summary>
+            constructor
+            </summary>
+            <param name="prefix">the logger's friendly name</param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.LogDebug(System.String)">
+            <summary>
+            To deal with the debug message. 
+            </summary>
+            <param name="message">debug string message</param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.LogInfo(System.String)">
+            <summary>
+            To deal with the information message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.LogWarn(System.String)">
+            <summary>
+            To deal with the warn message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.LogError(System.String)">
+            <summary>
+            To deal with the error message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.LogFatal(System.String)">
+            <summary>
+            To deal with the fatal message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LoggerBase.CanWrite(ReactiveMVVM.Logging.LogLevel)">
+            <summary>
+            if can write this level log.
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ReactiveMVVM.Logging.LoggerBase.LogLevel">
+            <summary>
+            Get or set the from which level will log message. 
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.DefaultLogger">
+            <summary>
+            The default logger just to wirte message in cosole .
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.DefaultLogger.#ctor(System.String)">
+            <summary>
+            constructor
+            </summary>
+            <param name="prefix">the logger's friendly name</param>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.LogLevel">
+            <summary>
+            The level of log.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.LogManger">
+            <summary>
+            The log manager to setup the logger.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.LogManger.GetLogger(System.String)">
+            <summary>
+            Get the logger with friendly name.
+            </summary>
+            <param name="name">the friendly name of the loggger.</param>
+            <returns></returns>
+        </member>
+        <member name="P:ReactiveMVVM.Logging.LogManger.LoggerFactory">
+            <summary>
+            the logger factory. Default value is DefaultLogger constructor.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Logging.LogManger.LogLevel">
+            <summary>
+            Get or set the from which level can log message. 
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Logging.TypeCache`2">
+             <summary>
+             This data structure is a representation of a memorizing cache - i.e. a
+             class that will evaluate a function, but keep a cache of recently
+             evaluated parameters.
+            
+             Since this is a memoizing cache, it is important that this function be a
+             "pure" function in the mathematical sense - that a key *always* maps to
+             a corresponding return value.
+             </summary>
+             <typeparam name="TParam">The type of the parameter to the calculation function.</typeparam>
+             <typeparam name="TVal">The type of the value returned by the calculation
+             function.</typeparam>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.TypeCache`2.#ctor(System.Func{`0,System.Object,`1},System.Int32,System.Action{`1})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="calculationFunc">The function whose results you want to cache,
+            which is provided the key value, and an Tag object that is
+            user-defined</param>
+            <param name="maxSize">The size of the cache to maintain, after which old
+            items will start to be thrown out.</param>
+            <param name="onRelease">A function to call when a result gets
+            evicted from the cache (i.e. because Invalidate was called or the
+            cache is full)</param>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.TypeCache`2.Get(`0,System.Object)">
+            <summary>
+            Evaluates the function provided, returning the cached value if possible
+            </summary>
+            <param name="key">The value to pass to the calculation function.</param>
+            <param name="context">An additional optional user-specific parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.TypeCache`2.Invalidate(`0)">
+            <summary>
+            Ensure that the next time this key is queried, the calculation
+            function will be called.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.TypeCache`2.InvalidateAll">
+            <summary>
+            Invalidate all items in the cache
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Logging.TypeCache`2.CachedValues">
+            <summary>
+            Returns all values currently in the cache
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.IMessage">
+            <summary>
+            The message base infterface.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.IMessenger">
+            <summary>
+            The messager, can register some work to anthor object with out referance it.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.IsRegistered``1(System.String)">
+            <summary>
+            Whether registered or not.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.IsRegistered(System.Object)">
+            <summary>
+            Whether registered or not.
+            </summary>
+            <param name="registor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Register``1(System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register any object message ation.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute meesage</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Register``1(System.String,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register <see cref="!:T"/> ation with the object.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="name">The sign name of the message, if the recipient meesage have the same sign name and satisfy the conditon can execute register action. </param>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute action.</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Register``1(System.Type,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register ation with the type, when get message going to do.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="registorType">this type of message sender, if the recipient meesage have the same sender type and satisfy the conditon can execute register action.</param>
+            <param name="action">ation do with recipient</param>
+            <param name="predicate">when the recipient match some condition, can do the action</param>
+            <param name="scheduler">set the one scheduler</param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Register``1(System.Object,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register ation with the object, when get message going to do.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="registor">message sender, if the recipient meesage have the same sender and satisfy the conditon can execute register action.</param>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute action.</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Unregister``1(System.String)">
+            <summary>
+            Clear the action has registed with the name.
+            </summary>
+            <param name="T"></param>
+            <param name="name">the name of the messae.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.IMessenger.Unregister(System.Object)">
+            <summary>
+            clear the action have registed to the object.
+            </summary>
+            <param name="registor">the object registed</param>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.IPropertyMessages">
+            <summary>
+            The property message.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.ISenderMessage">
+            <summary>
+            The message base infterface.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.ISenderMessage.Sender">
+            <summary>
+            Gets or sets the message's sender.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.IPropertyMessages.PropertyName">
+            <summary>
+            Gets or sets the name of the property that changed.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.IPropertyMessages.Target">
+            <summary>
+            Gets or sets the message's intended target. This property can be used
+            to give an indication as to whom the message was intended for. Of course
+            this is only an indication, amd may be null.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.IPropertyChangedMessage`1">
+            <summary>
+            The property changed message.
+            </summary>
+            <typeparam name="T">the type of property value</typeparam>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.IPropertyChangedMessage`1.NewValue">
+            <summary>
+            Gets the value that the property has after the change.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.IPropertyChangedMessage`1.OldValue">
+            <summary>
+            Gets the value that the property had before the change.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.IPropertyChangedMessageWithCallback`1">
+            <summary>
+            property changed message. with callback function, need regist in 
+            </summary>
+            <typeparam name="T">the type of property value</typeparam>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.IPropertyChangedMessageWithCallback`1.Callback">
+            <summary>
+            the call back action
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.ISigneMessage">
+            <summary>
+            The message with sign name.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.ISigneMessage.Name">
+            <summary>
+            the name of the message
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.ICallbackMessage`1">
+            <summary>
+            The message with name and call back function.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.ICallbackMessage`1.Callback">
+            <summary>
+            the call back action
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.SigneMessage">
+            <summary>
+            The message with sign name.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.SigneMessage.Name">
+            <summary>
+            The name of the message
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.SigneMessage.Sender">
+            <summary>
+            Gets or sets the message's sender.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.CallbackMessage`1">
+            <summary>
+            The message with callback.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.CallbackMessage`1.Callback">
+            <summary>
+            call back action.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.DynamicQueryMessage">
+            <summary>
+            The query message.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.DynamicQueryMessage.Paramter">
+            <summary>
+            The paramter can set any message sturct.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.Messenger">
+            <summary>
+            The reactive messager.
+            Creator: Houjun Zhou
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Subscribe(System.IObserver{System.Object})">
+            <summary>
+            Subscribes an observer to the subject.
+            </summary>
+            <remarks>
+            IDisposable object that can be used to unsubscribe the observer from the subject.
+            </remarks>
+            <param name="observer">Observer to subscribe to the subject.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.IsRegistered``1(System.String)">
+            <summary>
+            if is registered.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.IsRegistered(System.Object)">
+            <summary>
+            if is registered.
+            </summary>
+            <param name="registor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Register``1(System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register any object message ation.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute meesage</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Register``1(System.String,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register <see cref="!:T"/> ation with the object.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="name">The sign name of the message, if the recipient meesage have the same sign name and satisfy the conditon can execute register action. </param>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute action.</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Register``1(System.Type,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register ation with the type, when get message going to do.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="registorType">this type of message sender, if the recipient meesage have the same sender type and satisfy the conditon can execute register action.</param>
+            <param name="action">ation do with recipient</param>
+            <param name="predicate">when the recipient match some condition, can do the action</param>
+            <param name="scheduler">set the one scheduler</param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Register``1(System.Object,System.Action{``0},System.Func{``0,System.Boolean},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Register ation with the object, when get message going to do.
+            </summary>
+            <typeparam name="T">The type of the message</typeparam>
+            <param name="registor">message sender, if the recipient meesage have the same sender and satisfy the conditon can execute register action.</param>
+            <param name="action">The action to execute when send this message</param>
+            <param name="predicate">The predicate filter to set which condition to execute action.</param>
+            <param name="scheduler">Set action work this scheduler. </param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Unregister``1(System.String)">
+            <summary>
+            clear the action have registed.
+            </summary>
+            <param name="type"></param>
+            <param name="name">The name of the message.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Unregister(System.Object)">
+            <summary>
+            clear the action have registed.
+            </summary>
+            <param name="registor"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Messaging.Messenger.Dispose">
+            <summary>
+            Implement IDisposable, Can unsubscribe all observers and release resources. 
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.Messenger.Default">
+            <summary>
+            the default messager.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyMessage.Sender">
+            <summary>
+            Gets or sets the message's sender.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyMessage.PropertyName">
+            <summary>
+            Gets or sets the name of the property that changed.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyMessage.Target">
+            <summary>
+            Gets or sets the message's intended target. This property can be used
+            to give an indication as to whom the message was intended for. Of course
+            this is only an indication, amd may be null.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Messaging.PropertyChangedMessage`1">
+            <summary>
+            The property changed message.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyChangedMessage`1.NewValue">
+            <summary>
+            Gets the value that the property has after the change.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyChangedMessage`1.OldValue">
+            <summary>
+            Gets the value that the property had before the change.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.Messaging.PropertyChangedMessageWithCallback`1.Callback">
+            <summary>
+            call back action.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.ModelBase.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the PropertyChanged event if needed.
+            </summary>
+            <remarks>If the propertyName parameter
+            does not correspond to an existing property on the current class, an
+            exception is thrown in DEBUG configuration only.</remarks>
+            <param name="propertyName">The name of the property that
+            changed.</param>
+        </member>
+        <member name="T:ReactiveMVVM.MvvmManager">
+            <summary>
+            MVVM manager to setting the 
+            </summary>
+        </member>
+        <member name="F:ReactiveMVVM.MvvmManager.DefaultScheduler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.ObservableObject">
+            <summary>
+            The base oberverable object.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableObject.SuppressBroadcast">
+            <summary>
+            When this method is called, an object will not broadcast message
+            until the return value is disposed.
+            </summary>
+            <returns>
+            An object that, when disposed, reenables broadcast
+            </returns>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableObject.BroadcastChanged``1(``0,``0,System.String)">
+            <summary>
+            Broadcast
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableObject.RaisePropertyChanged``1(System.String,``0,``0,System.Boolean)">
+            <summary>
+            Raises the PropertyChanged event if needed, and broadcasts a
+            PropertyChangedMessage using the Messenger instance (or the
+            static default instance if no Messenger instance is available).
+            </summary>
+            <typeparam name="T">The type of the property that
+            changed.</typeparam>
+            <param name="propertyName">The name of the property that
+            changed.</param>
+            <param name="oldValue">The property's value before the change
+            occurred.</param>
+            <param name="newValue">The property's value after the change
+            occurred.</param>
+            <param name="broadcast">If true, a PropertyChangedMessage will
+            be broadcasted. If false, only the event will be raised.</param>
+            <remarks>If the propertyName parameter
+            does not correspond to an existing property on the current class, an
+            exception is thrown in DEBUG configuration only.</remarks>
+        </member>
+        <member name="M:ReactiveMVVM.ObservableObject.Dispose">
+            <summary>
+            Implement IDisposable, Can unsubscribe all observers and release resources. 
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Subjects.ScheduledSubject`1">
+            <summary>
+            This subject observe on the one scheduler. 
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.#ctor(System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            constructor.
+            Create a new Subject observe on the one scheduler. 
+            </summary>
+            <param name="scheduler"></param>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.Dispose">
+            <summary>
+            Unsubscribe all observers and release resources.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.OnCompleted">
+            <summary>
+            Notifies all subscribed observers of the end of the sequence.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.OnError(System.Exception)">
+            <summary>
+            Notifies all subscribed observers with the exception.
+            </summary>
+            <param name="error">The exception to send to all subscribed observers.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.OnNext(`0)">
+            <summary>
+            Notifies all subscribed observers with the value.
+            </summary>
+            <param name="value">The value to send to all subscribed observers.</param>
+        </member>
+        <member name="M:ReactiveMVVM.Subjects.ScheduledSubject`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Subscribes an observer to the subject.
+            </summary>
+            <remarks>
+            IDisposable object that can be used to unsubscribe the observer from the subject.
+            </remarks>
+            <param name="observer">Observer to subscribe to the subject.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.ViewModelBase">
+            <summary>
+            The class for the ViewModel classes, use in the MVVM pattern.
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.ViewModelBase.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:ReactiveMVVM.ViewModelBase.#ctor(ReactiveMVVM.Messaging.IMessenger)">
+            <summary>
+            constructor.
+            </summary>
+            <remarks>
+            Initializes a new instance of the ViewModelBase class.
+            </remarks>
+            <param name="messenger">An instance of a <see cref="P:ReactiveMVVM.ViewModelBase.Messenger"/>
+            used to broadcast messages to other objects. If null, this class
+            will attempt to broadcast using the Messenger's default
+            instance.</param>
+        </member>
+        <member name="M:ReactiveMVVM.ViewModelBase.BroadcastChanged``1(``0,``0,System.String)">
+            <summary>
+            To broadcast property changed message.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+            <param name="propertyName"></param>
+        </member>
+        <member name="P:ReactiveMVVM.ViewModelBase.Messenger">
+            <summary>
+            Gets or sets an instance of a <see cref="T:ReactiveMVVM.Messaging.IMessenger"/> used to
+            broadcast messages to other objects. If null, this class will
+            attempt to broadcast using the Messenger's default instance.
+            </summary>
+        </member>
+        <member name="P:ReactiveMVVM.ViewModelBase.IsInDesignMode">
+            <summary>
+            Gets a value indicating whether the control is in design mode
+            (running in Blend or Visual Studio).
+            </summary>
+        </member>
+    </members>
+</doc>

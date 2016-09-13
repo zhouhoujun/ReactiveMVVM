@@ -1,0 +1,3 @@
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM_WP7.csprojResolveAssemblyReference.cache
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM.pdb
