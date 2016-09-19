@@ -53,16 +53,16 @@ namespace System.Diagnostics.Contracts
     /// Create by self. To same with .Net framework.
     /// </summary>
     internal class ContractInvariantMethodAttribute : Attribute { }
-    /// <summary>
-    /// Create by self. To same with .Net framework.
-    /// </summary>
-    internal class Contract
-    {
-        public static void Requires(bool b, string s = null) { }
-        public static void Ensures(bool b, string s = null) { }
-        public static void Invariant(bool b, string s = null) { }
-        public static T Result<T>() { return default(T); }
-    }
+    ///// <summary>
+    ///// Create by self. To same with .Net framework.
+    ///// </summary>
+    //internal class Contract
+    //{
+    //    public static void Requires(bool b, string s = null) { }
+    //    public static void Ensures(bool b, string s = null) { }
+    //    public static void Invariant(bool b, string s = null) { }
+    //    public static T Result<T>() { return default(T); }
+    //}
 }
 
 #endif

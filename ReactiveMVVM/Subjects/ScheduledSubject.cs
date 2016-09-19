@@ -78,7 +78,7 @@ namespace ReactiveMVVM.Subjects
         public IDisposable Subscribe(IObserver<T> observer)
         {
             if (_scheduler == null)
-                return _subject.ObserveOnDispatcher().Subscribe(observer);
+                return _subject.ObserveOnDefaultScheduler().Subscribe(observer);
             else
                 return _subject.ObserveOn(_scheduler).Subscribe(observer);
         }

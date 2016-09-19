@@ -1,0 +1,17 @@
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM.csprojResolveAssemblyReference.cache
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\ReactiveMVVM.XML
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\ReactiveMVVM.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\ReactiveMVVM.pdb
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Core.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Interfaces.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Linq.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.PlatformServices.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Windows.Threading.dll
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Core.xml
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Interfaces.xml
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Linq.xml
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.PlatformServices.xml
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\bin\Debug\System.Reactive.Windows.Threading.xml
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM\obj\Debug\ReactiveMVVM.pdb

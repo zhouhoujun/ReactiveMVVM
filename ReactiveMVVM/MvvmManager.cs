@@ -14,7 +14,11 @@ namespace ReactiveMVVM
 
         static MvvmManager()
         {
-            DefaultScheduler = DispatcherScheduler.Instance;
+#if !PORTABLE
+            DefaultScheduler = TaskPoolScheduler.Default;
+#else
+            DefaultScheduler = DispatcherScheduler.Current;
+#endif
         }
     }
 }

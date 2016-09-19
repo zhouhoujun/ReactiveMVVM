@@ -2,7 +2,7 @@
 using System;
 using System.Reactive.Subjects;
 using System.Reactive.Concurrency;
-using System.Windows.Threading;
+//using System.Windows.Threading;
 using System.Reactive.Linq;
 using ReactiveMVVM.Logging;
 using System.Linq.Expressions;
@@ -13,6 +13,9 @@ using System.Threading;
 namespace ReactiveMVVM
 {
 
+    /// <summary>
+    /// observable extensions for model.
+    /// </summary>
     public static class ModelExtensions
     {
         /// <summary>
@@ -39,6 +42,9 @@ namespace ReactiveMVVM
         }
     }
 
+    /// <summary>
+    /// Observable Extenstions
+    /// </summary>
     public static class ObservableExtenstions
     {
         /// <summary>

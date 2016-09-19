@@ -1,0 +1,1 @@
+D:\Workspace\source\ReactiveMVVM\ReactiveMVVM.UWP\obj\Debug\ReactiveMVVM.UWP.csprojResolveAssemblyReference.cache

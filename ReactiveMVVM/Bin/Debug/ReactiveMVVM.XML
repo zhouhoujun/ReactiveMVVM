@@ -143,6 +143,11 @@
             
             </summary>
         </member>
+        <member name="T:ReactiveMVVM.ModelExtensions">
+            <summary>
+            observable extensions for model.
+            </summary>
+        </member>
         <member name="M:ReactiveMVVM.ModelExtensions.RaiseAndSetIfChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1@,``1)">
             <summary>
             set it new value, raise event PropertyChangedEventHandler and broadcast property changed message if changed.
@@ -154,6 +159,11 @@
             <param name="oldvalue">old value of the property.</param>
             <param name="newValue">new value of the property.</param>
             <returns></returns>
+        </member>
+        <member name="T:ReactiveMVVM.ObservableExtenstions">
+            <summary>
+            Observable Extenstions
+            </summary>
         </member>
         <member name="M:ReactiveMVVM.ObservableExtenstions.RaiseAndSetIfChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1@,``1,System.Boolean)">
             <summary>
@@ -392,6 +402,11 @@
         <member name="T:ReactiveMVVM.Ioc.InjectAttribute">
             <summary>
             The attribute to define how to be injected.
+            </summary>
+        </member>
+        <member name="T:ReactiveMVVM.Ioc.IocContainer">
+            <summary>
+            Future, developing...
             </summary>
         </member>
         <member name="T:ReactiveMVVM.Ioc.ResolveException">
@@ -949,6 +964,11 @@
             call back action.
             </summary>
         </member>
+        <member name="T:ReactiveMVVM.ModelBase">
+            <summary>
+            Model Base.
+            </summary>
+        </member>
         <member name="M:ReactiveMVVM.ModelBase.RaisePropertyChanged(System.String)">
             <summary>
             Raises the PropertyChanged event if needed.
@@ -958,6 +978,17 @@
             exception is thrown in DEBUG configuration only.</remarks>
             <param name="propertyName">The name of the property that
             changed.</param>
+        </member>
+        <member name="M:ReactiveMVVM.ModelBase.VerifyPropertyName(System.String)">
+            <summary>
+            Verify property by name.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="E:ReactiveMVVM.ModelBase.PropertyChanged">
+            <summary>
+            Property changed event handler.
+            </summary>
         </member>
         <member name="T:ReactiveMVVM.MvvmManager">
             <summary>
